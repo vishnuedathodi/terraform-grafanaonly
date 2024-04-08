@@ -14,14 +14,14 @@ resource "null_resource" "example" {
   }
 }
 
-resource "helm_release" "tempo" {
+resource "helm_release" "grafana" {
  
-  name       = "tempo"  
+  name       = "grafana"  
   repository = "https://grafana.github.io/helm-charts"
-  chart      = "tempo"
+  chart      = "grafana"
   namespace  = "prometheus"
   create_namespace = false
-  version    = "1.7.2"
+  #version    = "1.7.2"
   timeout = 2000
   set {
     name  = "server.persistentVolume.enabled"
