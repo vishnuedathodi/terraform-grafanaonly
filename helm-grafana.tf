@@ -21,7 +21,7 @@ resource "helm_release" "grafana" {
   chart      = "grafana"
   namespace  = "prometheus"
   create_namespace = false
-  #version    = "1.7.2"
+  version    = "6.59.4"
   timeout = 2000
   set {
     name  = "server.persistentVolume.enabled"
