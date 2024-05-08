@@ -29,7 +29,7 @@ data "aws_eks_cluster_auth" "installationcluster" {
 
 
 provider "aws" {
-  region     = "us-east-2"
+  region     = "${var.region}"
 }
 
 provider "helm" {
