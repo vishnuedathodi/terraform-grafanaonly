@@ -19,7 +19,7 @@ resource "helm_release" "grafana" {
   name       = "grafana"  
   repository = "https://grafana.github.io/helm-charts"
   chart      = "grafana"
-  namespace  = "prometheus"
+  namespace  = "${var.namespace}"
   create_namespace = false
   version    = "6.59.4"
   timeout = 2000
